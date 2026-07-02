@@ -1,0 +1,11 @@
+{
+  // Cloudflare static-site (Workers Assets) config for the SYNFX Upscaler SPA.
+  // `npm run build` produces ./dist, and `npx wrangler deploy` publishes it.
+  "name": "synfx-upscaler2",
+  "compatibility_date": "2024-11-01",
+  "assets": {
+    "directory": "./dist",
+    // Serve index.html for unknown paths so client-side routing / deep links work.
+    "not_found_handling": "single-page-application"
+  }
+}
